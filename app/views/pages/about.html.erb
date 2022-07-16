@@ -1,0 +1,15 @@
+<h1>Test</h1>
+<p>Maintenant il est <%= Time.now %><p>
+
+<form action="/about" method="get">
+  <input type="text" name="member" value="<%= params[:member] %>" placeholder="Who are you looking for?">
+  <input type="submit">
+</form>
+
+<h2>Meet our team</h2>
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member %></li>
+  <% end %>
+</ol>
+<%= link_to "Contact", contact_path  %>
